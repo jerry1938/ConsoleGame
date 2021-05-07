@@ -35,90 +35,129 @@ namespace ConsoleGame.Screen
 
             Console.ForegroundColor = ConsoleColor.Black;
             // Row 1
-            Console.SetCursorPosition(47, 15);
+            Console.SetCursorPosition(46, 14);
             Console.Write(" ");
             Console.ForegroundColor = ConsoleColor.DarkGray;
+            for (int i = -3; i < 4; i++)
+            {
+                Console.Write(mapCharacters[yPlayerPos - 4][xPlayerPos + i]);
+            }
+
+            // Row 2
+            Console.SetCursorPosition(46, 15);
+            Console.Write(mapCharacters[yPlayerPos - 3][xPlayerPos - 4]);
+            Console.Write(mapCharacters[yPlayerPos - 3][xPlayerPos - 3]);
+            Console.ForegroundColor = ConsoleColor.Gray;
             for (int i = -2; i < 3; i++)
             {
                 Console.Write(mapCharacters[yPlayerPos - 3][xPlayerPos + i]);
             }
-
-            // Row 2
-            Console.SetCursorPosition(47, 16);
-            Console.Write(mapCharacters[yPlayerPos - 2][xPlayerPos - 3]);
-            Console.ForegroundColor = ConsoleColor.Gray;
-            for (int i = -2; i < 3; i++)
-            {
-                Console.Write(mapCharacters[yPlayerPos - 2][xPlayerPos + i]);
-            }
             Console.ForegroundColor = ConsoleColor.DarkGray;
-            Console.Write(mapCharacters[yPlayerPos - 2][xPlayerPos + 3]);
+            Console.Write(mapCharacters[yPlayerPos - 3][xPlayerPos + 3]);
+            Console.Write(mapCharacters[yPlayerPos - 3][xPlayerPos + 4]);
 
             // Row 3
-            Console.SetCursorPosition(47, 17);
-            Console.Write(mapCharacters[yPlayerPos - 1][xPlayerPos - 3]);
+            Console.SetCursorPosition(46, 16);
+            Console.Write(mapCharacters[yPlayerPos - 2][xPlayerPos - 4]);
             Console.ForegroundColor = ConsoleColor.Gray;
-            Console.Write(mapCharacters[yPlayerPos - 1][xPlayerPos - 2]);
+            Console.Write(mapCharacters[yPlayerPos - 2][xPlayerPos - 3]);
+            Console.Write(mapCharacters[yPlayerPos - 2][xPlayerPos - 2]);
             Console.ForegroundColor = ConsoleColor.White;
             for (int i = -1; i < 2; i++)
             {
                 Console.Write(mapCharacters[yPlayerPos - 1][xPlayerPos + i]);
             }
             Console.ForegroundColor = ConsoleColor.Gray;
-            Console.Write(mapCharacters[yPlayerPos - 1][xPlayerPos + 2]);
+            Console.Write(mapCharacters[yPlayerPos - 2][xPlayerPos + 2]);
+            Console.Write(mapCharacters[yPlayerPos - 2][xPlayerPos + 3]);
             Console.ForegroundColor = ConsoleColor.DarkGray;
-            Console.Write(mapCharacters[yPlayerPos - 1][xPlayerPos + 3]);
+            Console.Write(mapCharacters[yPlayerPos - 2][xPlayerPos + 4]);
 
             // Row 4
-            Console.SetCursorPosition(47, 18);
-            Console.Write(mapCharacters[yPlayerPos][xPlayerPos - 3]);
+            Console.SetCursorPosition(46, 17);
+            Console.Write(mapCharacters[yPlayerPos - 1][xPlayerPos - 4]);
             Console.ForegroundColor = ConsoleColor.Gray;
-            Console.Write(mapCharacters[yPlayerPos][xPlayerPos - 2]);
+            Console.Write(mapCharacters[yPlayerPos - 1][xPlayerPos - 3]);
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write(mapCharacters[yPlayerPos][xPlayerPos - 1]);
-            Console.ForegroundColor = ConsoleColor.DarkCyan;
-            Console.Write(GlobalVariables.playerPrefix);
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.Write(mapCharacters[yPlayerPos][xPlayerPos + 1]);
+            for (int i = -2; i < 3; i++)
+            {
+                Console.Write(mapCharacters[yPlayerPos - 1][xPlayerPos + i]);
+            }
             Console.ForegroundColor = ConsoleColor.Gray;
-            Console.Write(mapCharacters[yPlayerPos][xPlayerPos + 2]);
+            Console.Write(mapCharacters[yPlayerPos - 1][xPlayerPos + 3]);
             Console.ForegroundColor = ConsoleColor.DarkGray;
-            Console.Write(mapCharacters[yPlayerPos][xPlayerPos + 3]);
+            Console.Write(mapCharacters[yPlayerPos - 1][xPlayerPos + 4]);
 
             // Row 5
-            Console.SetCursorPosition(47, 19);
-            Console.Write(mapCharacters[yPlayerPos + 1][xPlayerPos - 3]);
+            Console.SetCursorPosition(46, 18);
+            Console.Write(mapCharacters[yPlayerPos][xPlayerPos - 4]);
             Console.ForegroundColor = ConsoleColor.Gray;
-            Console.Write(mapCharacters[yPlayerPos + 1][xPlayerPos - 2]);
+            Console.Write(mapCharacters[yPlayerPos][xPlayerPos - 3]);
             Console.ForegroundColor = ConsoleColor.White;
-            for (int i = -1; i < 2; i++)
+            Console.Write(mapCharacters[yPlayerPos][xPlayerPos - 2]);
+            Console.Write(mapCharacters[yPlayerPos][xPlayerPos - 1]);
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
+            Console.Write('@');
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write(mapCharacters[yPlayerPos][xPlayerPos + 1]);
+            Console.Write(mapCharacters[yPlayerPos][xPlayerPos + 2]);
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.Write(mapCharacters[yPlayerPos][xPlayerPos + 3]);
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.Write(mapCharacters[yPlayerPos][xPlayerPos + 4]);
+
+            // Row 6
+            Console.SetCursorPosition(46, 19);
+            Console.Write(mapCharacters[yPlayerPos + 1][xPlayerPos - 4]);
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.Write(mapCharacters[yPlayerPos + 1][xPlayerPos - 3]);
+            Console.ForegroundColor = ConsoleColor.White;
+            for (int i = -2; i < 3; i++)
             {
                 Console.Write(mapCharacters[yPlayerPos + 1][xPlayerPos + i]);
             }
             Console.ForegroundColor = ConsoleColor.Gray;
-            Console.Write(mapCharacters[yPlayerPos + 1][xPlayerPos + 2]);
-            Console.ForegroundColor = ConsoleColor.DarkGray;
             Console.Write(mapCharacters[yPlayerPos + 1][xPlayerPos + 3]);
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.Write(mapCharacters[yPlayerPos + 1][xPlayerPos + 4]);
 
-            // Row 6
-            Console.SetCursorPosition(47, 20);
-            Console.Write(mapCharacters[yPlayerPos + 2][xPlayerPos - 3]);
+            // Row 7
+            Console.SetCursorPosition(46, 20);
+            Console.Write(mapCharacters[yPlayerPos + 2][xPlayerPos - 4]);
             Console.ForegroundColor = ConsoleColor.Gray;
-            for (int i = -2; i < 3; i++)
+            Console.Write(mapCharacters[yPlayerPos + 2][xPlayerPos - 3]);
+            Console.Write(mapCharacters[yPlayerPos + 2][xPlayerPos - 2]);
+            Console.ForegroundColor = ConsoleColor.White;
+            for (int i = -1; i < 2; i++)
             {
                 Console.Write(mapCharacters[yPlayerPos + 2][xPlayerPos + i]);
             }
-            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.Write(mapCharacters[yPlayerPos + 2][xPlayerPos + 2]);
             Console.Write(mapCharacters[yPlayerPos + 2][xPlayerPos + 3]);
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.Write(mapCharacters[yPlayerPos + 2][xPlayerPos + 4]);
 
-            // Row 7
-            Console.SetCursorPosition(47, 21);
-            Console.Write(" ");
+            // Row 8
+            Console.SetCursorPosition(46, 21);
+            Console.Write(mapCharacters[yPlayerPos + 3][xPlayerPos - 4]);
+            Console.Write(mapCharacters[yPlayerPos + 3][xPlayerPos - 3]);
+            Console.ForegroundColor = ConsoleColor.Gray;
             for (int i = -2; i < 3; i++)
             {
                 Console.Write(mapCharacters[yPlayerPos + 3][xPlayerPos + i]);
             }
-            Console.ForegroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.Write(mapCharacters[yPlayerPos + 3][xPlayerPos + 3]);
+            Console.Write(mapCharacters[yPlayerPos + 3][xPlayerPos + 4]);
+
+            // Row 9
+            Console.SetCursorPosition(46, 22);
+            Console.Write(" ");
+            for (int i = -3; i < 4; i++)
+            {
+                Console.Write(mapCharacters[yPlayerPos + 4][xPlayerPos + i]);
+            }
         }
     }
 }

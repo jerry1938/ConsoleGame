@@ -8,7 +8,7 @@ namespace ConsoleGame.Player
 {
     internal class PlayerStats
     {
-        public int XPosition { get; set; } = 5;
-        public int YPosition { get; set; } = 5;
+        public int XPosition { get; set; } = 7;
+        public int YPosition { get; set; } = 7;
     }
 }
