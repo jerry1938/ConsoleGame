@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleGame.Player
 {
-    class PlayerStats
+    internal class PlayerStats
     {
         public int XPosition { get; set; } = 5;
         public int YPosition { get; set; } = 5;

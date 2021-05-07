@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleGame.Screen
 {
-    class ScreenHandler
+    internal class ScreenHandler
     {
         public ScreenHandler() { }
         public ScreenHandler(int width, int height)
@@ -25,9 +25,8 @@ namespace ConsoleGame.Screen
             Console.BufferHeight = Console.WindowHeight = Height;
         }
 
-        public void PrintMap()
+        public static void PrintMap()
         {
-            //MapHelper mapHelper = new();
             int xPlayerPos = GlobalVariables.PlayerStats.XPosition;
             int yPlayerPos = GlobalVariables.PlayerStats.YPosition;
 
@@ -35,7 +34,6 @@ namespace ConsoleGame.Screen
             char[][] mapCharacters = map.Select(item => item.ToArray()).ToArray();
 
             Console.ForegroundColor = ConsoleColor.Black;
-            
             // Row 1
             Console.SetCursorPosition(47, 15);
             Console.Write(" ");

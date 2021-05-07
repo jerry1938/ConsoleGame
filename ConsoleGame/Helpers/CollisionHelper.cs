@@ -7,20 +7,15 @@ using System.Threading.Tasks;
 
 namespace ConsoleGame.Helpers
 {
-    class CollisionHelper
+    internal static class CollisionHelper
     {
-        public bool CheckCollision(int xDirection, int yDirection)
+        public static bool CheckCollision(int xDirection, int yDirection)
         {
             string[] map = GlobalVariables.map.Split(Environment.NewLine);
             char[][] mapCharacters = map.Select(item => item.ToArray()).ToArray();
 
-            if (mapCharacters[GlobalVariables.PlayerStats.YPosition + yDirection]
-                [GlobalVariables.PlayerStats.XPosition + xDirection] != '#')
-            {
-                return false;
-            }
-
-            return true;
+            return mapCharacters[GlobalVariables.PlayerStats.YPosition + yDirection]
+                [GlobalVariables.PlayerStats.XPosition + xDirection] == '#';
         }
     }
 }

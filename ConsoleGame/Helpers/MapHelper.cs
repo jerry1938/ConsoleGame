@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace ConsoleGame.Helpers
 {
-    class MapHelper
+    internal static class MapHelper
     {
-        public string Map()
+        public static string Map()
         {
-            string path = @"..\..\..\..\map1.txt";
+            const string path = @"..\..\..\..\map1.txt";
             string map = File.ReadAllText(path);
             return map;
         }

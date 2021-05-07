@@ -8,13 +8,10 @@ using System.Threading.Tasks;
 
 namespace ConsoleGame.Player
 {
-    class Movement
+    internal static class Movement
     {
-        public void Move()
+        public static void Move()
         {
-            ScreenHandler screenHandler = new();
-            CollisionHelper collisionHelper = new();
-
             while (true)
             {
                 ConsoleKey pressedKey;
@@ -31,34 +28,34 @@ namespace ConsoleGame.Player
                 {
                     case ConsoleKey.RightArrow:
                     case ConsoleKey.D:
-                        if (!collisionHelper.CheckCollision(1, 0))
+                        if (!CollisionHelper.CheckCollision(1, 0))
                         {
                             GlobalVariables.PlayerStats.XPosition++;
-                            screenHandler.PrintMap();
+                            ScreenHandler.PrintMap();
                         }
                         break;
                     case ConsoleKey.LeftArrow:
                     case ConsoleKey.A:
-                        if (!collisionHelper.CheckCollision(-1, 0))
+                        if (!CollisionHelper.CheckCollision(-1, 0))
                         {
                             GlobalVariables.PlayerStats.XPosition--;
-                            screenHandler.PrintMap();
+                            ScreenHandler.PrintMap();
                         }
                         break;
                     case ConsoleKey.DownArrow:
                     case ConsoleKey.S:
-                        if (!collisionHelper.CheckCollision(0, 1))
+                        if (!CollisionHelper.CheckCollision(0, 1))
                         {
                             GlobalVariables.PlayerStats.YPosition++;
-                            screenHandler.PrintMap();
+                            ScreenHandler.PrintMap();
                         }
                         break;
                     case ConsoleKey.UpArrow:
                     case ConsoleKey.W:
-                        if (!collisionHelper.CheckCollision(0, -1))
+                        if (!CollisionHelper.CheckCollision(0, -1))
                         {
                             GlobalVariables.PlayerStats.YPosition--;
-                            screenHandler.PrintMap();
+                            ScreenHandler.PrintMap();
                         }
                         break;
                     default:

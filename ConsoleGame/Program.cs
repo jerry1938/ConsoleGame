@@ -2,12 +2,11 @@
 
 namespace ConsoleGame
 {
-    class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
-            Game game = new();
-            game.Start();
+            Game.Start();
         }
     }
 }

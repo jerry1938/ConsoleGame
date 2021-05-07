@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace ConsoleGame.Helpers
 {
-    class GlobalVariables
+    internal static class GlobalVariables
     {
         public static PlayerStats PlayerStats = new();
         public static char playerPrefix = '@';
 
-        public static string map = new MapHelper().Map();
+        public static string map = MapHelper.Map();
     }
 }

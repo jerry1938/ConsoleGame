@@ -8,15 +8,14 @@ using System.Threading.Tasks;
 
 namespace ConsoleGame
 {
-    class Game
+    internal static class Game
     {
-        public void Start()
+        public static void Start()
         {
             ScreenHandler screenHandler = new(100, 40);
             screenHandler.ScreenSettings();
-            screenHandler.PrintMap();
-            Movement movement = new();
-            movement.Move();
+            ScreenHandler.PrintMap();
+            Movement.Move();
         }
     }
 }
