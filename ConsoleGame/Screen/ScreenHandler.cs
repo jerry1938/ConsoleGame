@@ -65,7 +65,7 @@ namespace ConsoleGame.Screen
             Console.ForegroundColor = ConsoleColor.White;
             for (int i = -1; i < 2; i++)
             {
-                Console.Write(mapCharacters[yPlayerPos - 1][xPlayerPos + i]);
+                Console.Write(mapCharacters[yPlayerPos - 2][xPlayerPos + i]);
             }
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.Write(mapCharacters[yPlayerPos - 2][xPlayerPos + 2]);
